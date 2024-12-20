@@ -15,6 +15,10 @@
     box-sizing: border-box;
 }
 
+html, body{
+    overflow-x: hidden;
+}
+
 body{
     font-family: "Poppins", serif;
     width: 100%;
@@ -28,7 +32,7 @@ body{
 }
 
 h1{
-    font-size: 60px;
+    font-size: 55px;
 }
 
 h2{
@@ -92,7 +96,7 @@ a{
     top: 50px;
     right: 50px;
     color: #fff;
-    font-size: 25px;
+    font-size: 28px;
     display: none;
 }
 
@@ -123,13 +127,115 @@ a{
     border-radius: 4px;
     color: var(--white);
     background-color: var(--prmry);
+    transition: 0.3s;
 }
-
+.searchbar button:hover{
+    background-color: var(--black);
+}
 .bar-icon i{
     cursor: pointer;
     font-size: 25px;
     color: #000;
     display: none;
+}
+
+/* Hero Styling */
+.hero{
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.right-col{
+    display: flex;
+    flex-direction: column;
+}
+
+/* .left-col{
+    position: relative;
+} */
+
+.hero-socials{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+    color: #000;
+}
+.hero-socials span{
+    cursor: pointer;
+}
+
+.hero .right-col h1{
+    max-width: 500px;
+    min-width: 100px;
+    width: 100%;
+}
+
+.hero .right-col p{
+    max-width: 380px;
+    min-width: 80px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.right-buttons{
+    margin-top: 40px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.right-buttons button{
+    font-weight: 600;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+.hero-btn-1{
+    width: 157px;
+    height: 46px;
+    color: #fff;
+    background-color: var(--prmry);
+    border: none;
+}
+.hero-btn-1:hover{
+    background-color: var(--black);
+}
+
+.hero-btn-2{
+    width: 188px;
+    height: 46px;
+    color: #ED017F;
+    background-color: transparent;
+    border: 1px solid var(--prmry);
+}
+
+.hero .square{
+    position: absolute;
+    top: -180px;
+    right: -140px;
+    z-index: -1;
+    width: 710px;
+    min-height: 680px;
+    background-color: var(--pink);
+}
+
+.hero-img{
+    position: relative;
+    width: 100%;
+    min-width: 600px;
+    max-width: 750px;
+}
+
+.hero-img img{
+    width: 100%;
+    object-fit: cover;
 }
 
 /* Responsive Design */
@@ -171,5 +277,32 @@ a{
         z-index: 9999999;
     }
 
+    .hero h1{
+        font-size: 45px;
+    }
 
-}
+    .hero .square{
+        display: none;
+    }
+
+    }
+
+    @media (max-width: 800px){
+        .hero-img{
+            display: none;
+        }
+        .hero .square{
+            display: none;
+        }
+        .hero h1{
+            font-size: 40px;
+        }
+      
+    }
+
+    @media (max-width: 400px){
+        .container{
+            width: 100%;
+            padding: 20px;
+        }
+    }
