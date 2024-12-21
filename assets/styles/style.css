@@ -180,6 +180,7 @@ a{
     min-width: 80px;
     width: 100%;
     margin: 15px 0;
+    color: var(--p-clr);
 }
 
 .right-buttons{
@@ -225,6 +226,37 @@ a{
     min-height: 680px;
     background-color: var(--pink);
 }
+.hero .apt{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #FFFFFF;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 180px;
+    height: 60px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+   
+}
+.hero .apt i{
+    font-size: 25px;
+    color: #ED017F;
+}
+.label1 h3, .label2 h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.label1{
+    top: 20px;
+}
+
+.label2{
+    top: 100px;
+    right: 0;
+}
 
 .hero-img{
     position: relative;
@@ -237,6 +269,7 @@ a{
     width: 100%;
     object-fit: cover;
 }
+
 
 /* Responsive Design */
 @media (max-width: 1280px){
@@ -305,4 +338,5 @@ a{
             width: 100%;
             padding: 20px;
         }
+      
     }
